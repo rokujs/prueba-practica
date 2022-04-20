@@ -1,20 +1,8 @@
-import Header from "@/components/Header"
-import SectionInfo from "@/components/SectionInfo"
-import SectionHistory from "@/components/SectionHistory"
+import LayoutApp from "@/components/LayoutApp"
 import React from "react"
 
 function App() {
-  return (
-    <>
-      <div>
-        <Header />
-        <main>
-          <SectionInfo />
-          <SectionHistory />
-        </main>
-      </div>
-    </>
-  )
+  return <LayoutApp />
 }
 
 export default App

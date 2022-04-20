@@ -1,8 +1,8 @@
-import React from "react"
+import { item } from './styles'
 
-function ItemHistory() {
+function ItemHistory () {
   return (
-    <tr>
+    <tr css={item}>
       <td>Cobro exitoso</td>
       <td>04/06/2020 - 17:14:24</td>
       <td>**** **** **** 7711</td>
