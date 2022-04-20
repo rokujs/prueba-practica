@@ -1,4 +1,4 @@
-import ItemHistory from '@/components/ItemHistory'
+import ListOfItemsHistory from '@/components/ListOfItemsHistory'
 
 import { container, headerContainer, tableHeader, tableBody, tableContainer } from './styles'
 
@@ -18,7 +18,7 @@ function SectionHistory () {
             </tr>
           </thead>
           <tbody css={tableBody}>
-            <ItemHistory />
+            <ListOfItemsHistory />
           </tbody>
         </table>
       </div>

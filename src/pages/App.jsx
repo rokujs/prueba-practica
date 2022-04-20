@@ -1,7 +1,6 @@
-import LayoutApp from "@/components/LayoutApp"
-import React from "react"
+import LayoutApp from '@/components/LayoutApp'
 
-function App() {
+function App () {
   return <LayoutApp />
 }
 

@@ -1,13 +1,29 @@
 import { item } from './styles'
 
-function ItemHistory () {
+function ItemHistory ({
+  id,
+  paymentMethod,
+  numbersCard,
+  amount,
+  transaction,
+  date,
+  deduction
+}) {
   return (
     <tr css={item}>
-      <td>Cobro exitoso</td>
-      <td>04/06/2020 - 17:14:24</td>
-      <td>**** **** **** 7711</td>
-      <td>IDLAÑDJFLKSADJF</td>
-      <td>$25.000</td>
+      <td>{transaction ? 'Cobro Exitoso' : 'Cobro no realizado'}</td>
+      <td>{date}</td>
+      <td>**** **** **** {numbersCard}</td>
+      <td>{id}</td>
+      <td>
+        <p>{amount}</p>
+        {deduction > 0 && (
+          <>
+            <p>Deducción Bold</p>
+            <p>{deduction}</p>
+          </>
+        )}
+      </td>
     </tr>
   )
 }
