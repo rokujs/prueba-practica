@@ -4,7 +4,7 @@ function Header () {
   return (
     <header css={container}>
       <div css={image}>
-        <img src='https://bold.co/assets/img/logo-white-674baccb93.png' />
+        <img src='https://bold.co/assets/img/logo-white-674baccb93.png' alt="Icon Bold" />
       </div>
       <div css={menu}>
         <nav>

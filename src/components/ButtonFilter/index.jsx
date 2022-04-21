@@ -1,19 +1,25 @@
 import { useState } from 'react'
 import { btn, container, form } from './styles'
 
+import icon from '@/assets/icons/icons8-opciones-para-ordenar-48.png'
+
 function ButtonFilter () {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div css={container}>
       <button onClick={() => setIsOpen(true)} css={btn}>
-        <span>FILTRAR</span>
+        <span>
+          FILTRAR<img src={icon} />
+        </span>
       </button>
       {isOpen && (
         <div css={form}>
           <div>
             <h5>FILTRAR</h5>
-            <button type='button' onClick={() => setIsOpen(false)}>X</button>
+            <button type='button' onClick={() => setIsOpen(false)}>
+              X
+            </button>
           </div>
           <form>
             <div>

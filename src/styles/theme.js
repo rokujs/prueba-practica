@@ -11,7 +11,7 @@ export const colors = {
 export const fontSize = {
   small: '1.6rem',
   medium: '2rem',
-  large: '2rem'
+  large: '2.4rem'
 }
 
 export const queries = {

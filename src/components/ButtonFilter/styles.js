@@ -17,6 +17,11 @@ export const btn = css`
     font-size: ${fontSize.medium};
     font-weight: 400;
     color: ${colors.blue};
+
+    & > img {
+    width: ${fontSize.medium};
+    margin-left: 1rem;
+  }
   }
 `
 
@@ -56,7 +61,7 @@ export const form = css`
     background: transparent;
     border: none;
     cursor: pointer;
-    font-size: ${fontSize.large};
+    font-size: ${fontSize.medium};
     color: ${colors.blue};
   }
 

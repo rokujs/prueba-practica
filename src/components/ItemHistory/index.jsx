@@ -1,3 +1,4 @@
+import ImagePaymentMethod from '../ImagePaymentMethod'
 import { item, negative } from './styles'
 
 function ItemHistory ({
@@ -13,7 +14,7 @@ function ItemHistory ({
     <tr css={item(transaction)}>
       <td>{transaction ? 'Cobro Exitoso' : 'Cobro no realizado'}</td>
       <td>{date}</td>
-      <td>**** **** **** {numbersCard}</td>
+      <td><ImagePaymentMethod method={paymentMethod} />**** **** **** {numbersCard}</td>
       <td>{id}</td>
       <td>
         <p>{amount}</p>

@@ -31,9 +31,20 @@ export const title = css`
   padding: 2rem;
   font-weight: 500;
 
+  & > svg {
+    fill: ${colors.white};
+    height: ${fontSize.medium} !important;
+    width: ${fontSize.medium} !important;
+  }
+
   @media (${queries.mobile}) {
     padding: 1.8rem;
     font-size: ${fontSize.small};
+
+    & > svg {
+    height: ${fontSize.small} !important;
+    width: ${fontSize.small} !important;
+  }
   }
 `
 export const totalMoney = css`

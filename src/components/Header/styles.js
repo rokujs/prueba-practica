@@ -36,7 +36,7 @@ export const menu = css`
   nav > ul > li > a {
     text-decoration: none;
     color: ${colors.white};
-    font-size: ${fontSize.large};
+    font-size: ${fontSize.medium};
     transition: text-decoration 0.15s;
 
     @media (${queries.mobile}) {

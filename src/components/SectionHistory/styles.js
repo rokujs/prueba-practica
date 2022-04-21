@@ -15,7 +15,7 @@ export const headerContainer = css`
   background: linear-gradient(to right, ${colors.blue} 0%, ${colors.red} 150%);
   width: 100%;
   padding: 1.2rem 3rem;
-  font-size: ${fontSize.large};
+  font-size: ${fontSize.medium};
   color: ${colors.white};
 `
 

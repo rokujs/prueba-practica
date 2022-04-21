@@ -13,7 +13,7 @@ const JSON = {
       },
       {
         id: 2,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 35000,
         transaction: true,
         date: 'Wed Apr 20 2022 12:02:04',
@@ -35,7 +35,7 @@ const JSON = {
     transactions: [
       {
         id: 1,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 25000,
         transaction: true,
         date: 'Wed Apr 20 2022 12:02:04',
@@ -51,7 +51,7 @@ const JSON = {
       },
       {
         id: 3,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 45000,
         transaction: false,
         date: 'Wed Apr 20 2022 12:02:04',
@@ -89,7 +89,7 @@ const JSON = {
     transactions: [
       {
         id: 1,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 25000,
         transaction: true,
         date: 'Wed Apr 20 2022 12:02:04',
@@ -113,7 +113,7 @@ const JSON = {
       },
       {
         id: 7,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 25000,
         transaction: true,
         date: 'Wed Apr 20 2022 12:02:04',
@@ -121,7 +121,7 @@ const JSON = {
       },
       {
         id: 8,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 35000,
         transaction: true,
         date: 'Wed Apr 20 2022 12:02:04',
@@ -145,7 +145,7 @@ const JSON = {
       },
       {
         id: 5,
-        paymentMethod: { numbers: 7712, name: 'mastercard' },
+        paymentMethod: { numbers: 7712, name: 'visa' },
         amount: 35000,
         transaction: true,
         date: 'Wed Apr 20 2022 12:02:04',
