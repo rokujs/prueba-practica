@@ -1,4 +1,4 @@
-import { item } from './styles'
+import { item, negative } from './styles'
 
 function ItemHistory ({
   id,
@@ -10,7 +10,7 @@ function ItemHistory ({
   deduction
 }) {
   return (
-    <tr css={item}>
+    <tr css={item(transaction)}>
       <td>{transaction ? 'Cobro Exitoso' : 'Cobro no realizado'}</td>
       <td>{date}</td>
       <td>**** **** **** {numbersCard}</td>
@@ -20,7 +20,7 @@ function ItemHistory ({
         {deduction > 0 && (
           <>
             <p>Deducción Bold</p>
-            <p>{deduction}</p>
+            <p css={negative}>{deduction}</p>
           </>
         )}
       </td>
