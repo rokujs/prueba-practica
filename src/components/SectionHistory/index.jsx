@@ -1,11 +1,21 @@
+import { useContext } from 'react'
+
+import Context from '@/context/SalesContext'
 import ListOfItemsHistory from '@/components/ListOfItemsHistory'
 
-import { container, headerContainer, tableHeader, tableBody, tableContainer } from './styles'
+import {
+  container,
+  headerContainer,
+  tableHeader,
+  tableBody,
+  tableContainer
+} from './styles'
 
 function SectionHistory () {
+  const { viewDate } = useContext(Context)
   return (
     <section css={container}>
-      <header css={headerContainer}>Tus ventas del dia seleccionado</header>
+      <header css={headerContainer}>Tus ventas de {viewDate}</header>
       <div css={tableContainer}>
         <table>
           <thead css={tableHeader}>

@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 import getSales from '@/services/getSales'
+import { styleAmount } from '@/utils/styleAmount'
+import { styleDate } from '@/utils/styleDate'
+import context from '@/context/SalesContext'
 import ItemHistory from '@/components/ItemHistory'
 
 function ListOfItemsHistory () {
   const [isLoading, setIsLoading] = useState(true)
-  const [historyItems, setHistoryItems] = useState([])
+  const { historyItems, dispatch } = useContext(context)
 
   useEffect(() => {
-    getSales().then(data => {
-      setHistoryItems(data.today.transactions)
+    getSales().then(res => {
+      dispatch({ type: 'SET_DATA', payload: res })
+      dispatch({ type: 'TODAY' })
       setIsLoading(false)
     })
   }, [])
@@ -27,18 +31,24 @@ function ListOfItemsHistory () {
   return (
     <>
       {historyItems.map(
-        ({ id, paymentMethod, amount, transaction, date, deduction }) => (
-          <ItemHistory
-            key={id}
-            id={id}
-            paymentMethod={paymentMethod.name}
-            numbersCard={paymentMethod.numbers}
-            amount={amount}
-            transaction={transaction}
-            date={date}
-            deduction={deduction}
-          />
-        )
+        ({ id, paymentMethod, amount, transaction, date, deduction }) => {
+          const newDate = styleDate(date)
+          const newAmount = styleAmount(amount)
+          const newDeduction = styleAmount(deduction)
+
+          return (
+            <ItemHistory
+              key={id}
+              id={id}
+              paymentMethod={paymentMethod.name}
+              numbersCard={paymentMethod.numbers}
+              amount={newAmount}
+              transaction={transaction}
+              date={newDate}
+              deduction={newDeduction}
+            />
+          )
+        }
       )}
     </>
   )

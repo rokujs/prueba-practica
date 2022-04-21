@@ -2,6 +2,8 @@ import Header from '@/components/Header'
 import SectionInfo from '@/components/SectionInfo'
 import SectionHistory from '@/components/SectionHistory'
 
+import { SalesContextProvider } from '@/context/SalesContext'
+
 import { container, main } from './styles'
 
 function LayoutApp () {
@@ -9,8 +11,10 @@ function LayoutApp () {
     <div css={container}>
       <Header />
       <main css={main}>
-        <SectionInfo />
-        <SectionHistory />
+        <SalesContextProvider>
+          <SectionInfo />
+          <SectionHistory />
+        </SalesContextProvider>
       </main>
     </div>
   )

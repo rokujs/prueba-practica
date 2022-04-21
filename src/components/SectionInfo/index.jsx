@@ -1,10 +1,10 @@
-import CardInfo from "@/components/CardInfo"
-import NavbarTime from "@/components/NavbarTime"
-import ButtonFilter from "@/components/ButtonFilter"
+import CardInfo from '@/components/CardInfo'
+import NavbarTime from '@/components/NavbarTime'
+import ButtonFilter from '@/components/ButtonFilter'
 
 import { container, card, navbar, filter } from './styles'
 
-function SectionInfo() {
+function SectionInfo () {
   return (
     <section css={container}>
       <article css={card}>
