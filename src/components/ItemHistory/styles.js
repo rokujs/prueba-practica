@@ -33,7 +33,7 @@ export const item = (transaction) => css`
 `
 
 export const negative = css`
-  color: ${colors.red};
+  color: ${colors.lightRed};
 
   &:before {
     content: "-$";

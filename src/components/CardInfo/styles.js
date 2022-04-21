@@ -9,6 +9,7 @@ export const container = css`
   border-radius: 1.5rem;
   height: 22rem;
   overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 `
 
 export const content = css`
