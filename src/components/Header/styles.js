@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontSize } from '@/styles/theme'
+import { colors, fontSize, queries } from '@/styles/theme'
 
 export const container = css`
   background: linear-gradient(to right, ${colors.blue}, ${colors.red});
@@ -9,10 +9,19 @@ export const container = css`
   align-items: center;
   height: 12rem;
   padding: 0 5rem;
+
+  @media (${queries.mobile}) {
+    height: 10rem;
+    padding: 0 1.4rem;
+  }
 `
 
 export const menu = css`
   min-width: 22rem;
+
+  @media (${queries.mobile}) {
+    min-width: 16rem;
+  }
 
   nav > ul {
     display: inline-flex;
@@ -29,6 +38,11 @@ export const menu = css`
     color: ${colors.white};
     font-size: ${fontSize.large};
     transition: text-decoration 0.15s;
+
+    @media (${queries.mobile}) {
+      font-size: ${fontSize.small};
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -36,6 +50,10 @@ export const menu = css`
 `
 export const image = css`
   max-width: 12rem;
+
+  @media (${queries.mobile}) {
+    max-width: 8rem;
+  }
 
   img {
     width: 100%;

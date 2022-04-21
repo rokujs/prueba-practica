@@ -1,22 +1,36 @@
 import { css } from '@emotion/react'
-import { colors, fontSize } from '@/styles/theme'
+import { colors, fontSize, queries } from '@/styles/theme'
 
 export const container = css`
   background-color: ${colors.white};
   width: 100%;
+  border-radius: 1.2rem;
+
+  @media (${queries.mobile}) {
+    border-radius: 0;
+  }
 `
 
 export const menu = css`
-  background-color: ${colors.white};
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.5rem;
+
+  @media (${queries.mobile}) {
+    justify-content: center;
+    padding: 0.2rem;
+  }
 
   & > li {
     list-style: none;
     flex: 1;
     text-align: center;
     margin: 0 1rem;
+
+    @media (${queries.mobile}) {
+      margin: 0 0.2rem;
+    }
 
     & > button {
       background-color: ${colors.white};

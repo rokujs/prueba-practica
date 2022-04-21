@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontSize } from '@/styles/theme'
+import { colors, fontSize, queries } from '@/styles/theme'
 
 export const container = css`
   background-color: ${colors.white};
@@ -7,9 +7,16 @@ export const container = css`
   min-width: 360px;
   width: 100%;
   border-radius: 1.5rem;
-  height: 22rem;
+  min-height: 22rem;
   overflow: hidden;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  @media (${queries.mobile}) {
+    min-width: 240px;
+    border-radius: 0;
+    min-height: 18rem;
+    box-shadow: none;
+  }
 `
 
 export const content = css`
@@ -23,6 +30,11 @@ export const title = css`
   color: ${colors.white};
   padding: 2rem;
   font-weight: 500;
+
+  @media (${queries.mobile}) {
+    padding: 1.8rem;
+    font-size: ${fontSize.small};
+  }
 `
 export const totalMoney = css`
   font-size: 5rem;
@@ -31,6 +43,10 @@ export const totalMoney = css`
   text-fill-color: transparent;
   font-weight: bold;
   text-align: center;
+
+  @media (${queries.mobile}) {
+    font-size: 3.8rem;
+  }
 
   &::before {
     content: "$";

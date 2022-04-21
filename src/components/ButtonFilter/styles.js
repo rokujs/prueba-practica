@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import { colors, fontSize } from '@/styles/theme'
+import { colors, fontSize, queries } from '@/styles/theme'
 
 export const container = css`
   background-color: ${colors.white};
@@ -31,6 +31,11 @@ export const form = css`
   width: max-content;
   text-align: center;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  @media (${queries.mobile}) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   & > div {
     text-align: center;

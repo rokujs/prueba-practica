@@ -1,19 +1,26 @@
 import { css } from '@emotion/react'
-import { colors, fontSize } from '@/styles/theme'
+import { colors, fontSize, queries } from '@/styles/theme'
 
 export const item = (transaction) => css`
   border-left: 1rem solid ${transaction ? colors.blue : colors.lightGrey};
   border-bottom: 1px solid ${colors.lightGrey};
 
   & > td {
-    /* text-align: center; */
     color: ${colors.lightGrey};
     font-size: ${fontSize.medium};
     padding: 2rem 0;
 
+    @media (${queries.tablet}) {
+      font-size: ${fontSize.small};
+    }
+
     &:first-of-type {
       color: ${colors.blue};
       padding-left: 5rem;
+
+      @media (${queries.tablet}) {
+        padding-left: 2rem;
+      }
     }
 
     & > p {

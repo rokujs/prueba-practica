@@ -1,9 +1,10 @@
 import { css } from '@emotion/react'
-import { colors } from '@/styles/theme'
+import { colors, queries } from '@/styles/theme'
 
 export const container = css`
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  min-width: 100vw;
   background-color: ${colors.bg};
 `
 
@@ -14,4 +15,19 @@ export const main = css`
   margin-top: 7rem;
   display: flex;
   flex-direction: column;
+
+  @media (${queries.laptop}) {
+    width: 900px;
+    margin-top: 5rem;
+  }
+
+  @media (${queries.tablet}) {
+    width: 700px;
+    margin-top: 3rem;
+  }
+
+  @media (${queries.mobile}) {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
 `
