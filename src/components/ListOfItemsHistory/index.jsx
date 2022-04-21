@@ -5,6 +5,7 @@ import { styleAmount } from '@/utils/styleAmount'
 import { styleDate } from '@/utils/styleDate'
 import context from '@/context/SalesContext'
 import ItemHistory from '@/components/ItemHistory'
+import Spinner from '@/components/Spinner'
 
 function ListOfItemsHistory () {
   const [isLoading, setIsLoading] = useState(true)
@@ -22,7 +23,7 @@ function ListOfItemsHistory () {
     return (
       <tr>
         <td>
-          <div>Loading...</div>
+          <Spinner />
         </td>
       </tr>
     )
